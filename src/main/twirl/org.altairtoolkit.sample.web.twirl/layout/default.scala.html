@@ -1,0 +1,19 @@
+@(title: String)(content: Html)(css: Html)(js: Html)
+@import org.altairtoolkit.sample.web.twirl.partial.html.head
+@import org.altairtoolkit.scalatra.helper.{Asset, Route}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @head(title)
+        @css
+    </head>
+
+    <body>
+        @content
+
+        <script src="@Asset("js/jquery.js")"></script>
+        <script src="@Asset("js/bootstrap.min.js")"></script>
+        <script src="@Asset("js/docs.min.js")"></script>
+        @js
+    </body>
+</html>
